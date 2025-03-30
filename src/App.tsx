@@ -1,34 +1,72 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React, { useState } from 'react';
+import { useTarefas } from './hooks/useTarefas';
+import TarefaList from './components/TarefaList';
+import TarefaForm from './components/TarefaForm';
+import { Tarefa, NovaTarefa } from './types';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const {
+    tarefas,
+    loading,
+    error,
+    addTarefa,
+    removeTarefa,
+    modifyTarefa,
+  } = useTarefas();
+
+  const [editingTarefa, setEditingTarefa] = useState<Tarefa | null>(null);
+
+  const handleFormSubmit = async (tarefaData: NovaTarefa | Tarefa) => {
+    if ('id' in tarefaData) {
+
+      await modifyTarefa(tarefaData.id, tarefaData);
+    } else {
+
+      await addTarefa(tarefaData);
+    }
+    setEditingTarefa(null);
+  };
+
+  const handleEdit = (tarefa: Tarefa) => {
+    setEditingTarefa(tarefa);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingTarefa(null);
+  };
+
+  const handleToggleConcluida = async (id: number, concluida: boolean) => {
+    await modifyTarefa(id, { concluida });
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+    <h1>Lista tarefas</h1>
+
+    <TarefaForm
+    onSubmit={handleFormSubmit}
+    initialData={editingTarefa}
+    isLoading={loading}
+  onCancelEdit={handleCancelEdit}
+  />
+
+  <h2>Tarefas</h2>
+  { }
+  {loading && <p>Carregando...</p>}
+  {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
+
+  { }
+  {!error && (
+    <TarefaList
+    tarefas={tarefas}
+    onDelete={removeTarefa}
+    onEdit={handleEdit}
+    onToggleConcluida={handleToggleConcluida}
+    isLoading={loading}
+    />
+  )}
+  </div>
   );
 }
 

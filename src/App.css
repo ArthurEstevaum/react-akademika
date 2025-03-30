@@ -1,42 +1,127 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+form {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef; 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+form div {
+  margin-bottom: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #495057;
+}
+
+form input[type="text"],
+  form input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  form input[type="text"] {
+    width: 100%;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  form input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle; 
+    height: 1rem; 
+    width: 1rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  form label[for="concluida"] {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
 
-.read-the-docs {
-  color: #888;
-}
+  form button[type="submit"] {
+    background-color: #007bff; 
+    color: white;
+    margin-right: 10px;
+  }
+
+  form button[type="submit"]:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+
+  form button[type="button"] { 
+    background-color: #6c757d; 
+    color: white;
+  }
+  form button[type="button"]:hover:not(:disabled) {
+    background-color: #5a6268;
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 15px 10px;
+    border-bottom: 1px solid #e9ecef; 
+    transition: background-color 0.2s ease;
+  }
+
+  li:hover {
+    background-color: #f8f9fa; 
+  }
+
+  li[style*="line-through"] { 
+    color: #6c757d; 
+  }
+
+
+  li span { 
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+
+  li button { 
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 5px 8px;
+    margin-left: 5px;
+    font-size: 0.9rem;
+  }
+
+  li button:hover:not(:disabled) {
+    border-color: #ced4da; 
+    background-color: #e9ecef;
+  }
+
+  li button:nth-of-type(1) { 
+    color: #ffc107; 
+  }
+  li button:nth-of-type(2) { 
+    color: #dc3545; 
+  }
+
+  li button:nth-of-type(1):hover:not(:disabled) { color: #d39e00; background-color: #fff3cd; border-color: transparent; }
+  li button:nth-of-type(2):hover:not(:disabled) { color: #a71d2a; background-color: #f8d7da; border-color: transparent;}
+
+  li input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-right: 15px;
+    height: 1.1rem;
+    width: 1.1rem;
+  }
+
+  p {
+    color: #6c757d;
+    text-align: center;
+    margin: 20px 0;
+  }
+  p[style*="color: red"] { 
+    color: #dc3545 !important;
+    font-weight: bold;
+  }
