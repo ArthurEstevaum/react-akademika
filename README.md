@@ -7,7 +7,7 @@
 Com a Akademika, organizar seus estudos é mamão com açúcar. O app permite que qualquer estudante mantenha suas anotações, tópicos de estudo e datas importantes perfeitamente organizados, sem a necessidade de sistemas complexos ou montes de papéis. Com apenas alguns passos, você pode ficar despreocupado e focar no que realmente importa: aprender.
 
 [Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
-
+[Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 ## Sobre o projeto
 ![logo](https://github.com/user-attachments/assets/17fcbafc-b4b7-4306-ae2f-408124106195)
 
