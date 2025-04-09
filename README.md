@@ -18,7 +18,7 @@ Com a Akademika, organizar seus estudos é mamão com açúcar. O app permite qu
 
 Permite que os usuários acessem seus recursos de estudo de forma segura e prática, mantendo seu aprendizado garantido.
 ![Cadastro form](https://github.com/user-attachments/assets/c1b4a13e-9ae1-4d5e-8abc-a1ee24742747)
-[Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
+[Link do figma](https://www.figma.com/proto/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=218-394&p=f&t=c0IokIbE7aeIyFyC-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=44%3A21)
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
