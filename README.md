@@ -30,14 +30,14 @@ Você pode gerenciar as disciplinas com extrema facilidade, com uma interface li
 
 ![Subject dashboard](https://github.com/user-attachments/assets/59035132-a161-43bd-aff3-026bb6c030ca)
 
-[Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
+[Link do figma]([https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0](https://www.figma.com/proto/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=254-425&p=f&t=c0IokIbE7aeIyFyC-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=44%3A21))
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
 ## Perfil de Disciplina
 O perfil de disciplina é responsável por mostrar ao usuário quais são as informações fornecidas daquela matéria,informando de forma rápida e prática acerca de dados, atividades e provas daquela disciplina.
 ![Subject information](https://github.com/user-attachments/assets/ce2a9052-8b96-404b-8baa-08f814edfe7e)
-[Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
+[Link do figma]([https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0](https://www.figma.com/proto/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=307-628&p=f&t=c0IokIbE7aeIyFyC-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=44%3A21))
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
