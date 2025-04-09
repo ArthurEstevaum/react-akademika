@@ -35,6 +35,7 @@ Você pode gerenciar as disciplinas com extrema facilidade, com uma interface li
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
 ## Perfil de Disciplina
+O perfil de disciplina é responsável por mostrar ao usuário quais são as informações fornecidas daquela matéria,informando de forma rápida e prática acerca de dados, atividades e provas daquela disciplina.
 ![Subject information](https://github.com/user-attachments/assets/ce2a9052-8b96-404b-8baa-08f814edfe7e)
 [Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
 
