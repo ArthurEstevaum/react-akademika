@@ -34,6 +34,7 @@ Você pode gerenciar as disciplinas com extrema facilidade, com uma interface li
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
+##Perfil de Disciplina
 ![Subject information](https://github.com/user-attachments/assets/ce2a9052-8b96-404b-8baa-08f814edfe7e)
 [Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
 
