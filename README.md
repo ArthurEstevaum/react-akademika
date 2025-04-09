@@ -30,7 +30,7 @@ Você pode gerenciar as disciplinas com extrema facilidade, com uma interface li
 
 ![Subject dashboard](https://github.com/user-attachments/assets/59035132-a161-43bd-aff3-026bb6c030ca)
 
-[Link do figma]([https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0](https://www.figma.com/proto/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=254-425&p=f&t=c0IokIbE7aeIyFyC-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=44%3A21)
+[Link do figma](https://www.figma.com/proto/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=254-425&p=f&t=c0IokIbE7aeIyFyC-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=44%3A21)
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
