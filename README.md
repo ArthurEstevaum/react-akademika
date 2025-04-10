@@ -4,7 +4,7 @@
 ![Home page](https://github.com/user-attachments/assets/0389e739-76f0-411d-8eb1-3a82a089bef5)
 
 
-Com a Akademika, organizar seus estudos é mamão com açúcar. O app permite que qualquer estudante mantenha suas anotações, tópicos de estudo e datas importantes perfeitamente organizados, sem a necessidade de sistemas complexos ou montes de papéis. Com apenas alguns passos, você pode ficar despreocupado e focar no que realmente importa: aprender.
+Já pensou em estruturar seus estudos de forma eficaz e com o uso de IA? Com a Akademika, organizar seus estudos é mamão com açúcar. O app permite que qualquer estudante mantenha suas anotações, tópicos de estudo e datas importantes perfeitamente organizados, sem a necessidade de sistemas complexos ou montes de papéis. Com apenas alguns passos, você pode ficar despreocupado e focar no que realmente importa: aprender. além disso, nós trazemos uma funcionalidade única: Uma Ia totalmente ao seu dispor.
 
 [Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
 
