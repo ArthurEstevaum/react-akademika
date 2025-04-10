@@ -14,7 +14,7 @@ Com a Akademika, organizar seus estudos é mamão com açúcar. O app permite qu
 
 ## Funcionalidades (1º release)
 
-### Login e cadastro de usuários
+### Cadastro e login de usuários
 
 Permite que os usuários acessem seus recursos de estudo de forma segura e prática, mantendo seu aprendizado garantido.
 ![Cadastro form](https://github.com/user-attachments/assets/c1b4a13e-9ae1-4d5e-8abc-a1ee24742747)
