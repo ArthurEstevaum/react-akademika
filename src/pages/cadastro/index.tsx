@@ -38,7 +38,7 @@ const Cadastro = () => {
   ];
   return (
     <WidthContainer>
-      <FormContainer message="Olá! Seja bem vindo novamente!">
+      <FormContainer message="Seja bem vindo!">
         <SimpleForm
           onSubmit={onSubmit}
           fields={fields}
