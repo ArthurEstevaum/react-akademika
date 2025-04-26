@@ -1,33 +1,29 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Header from "./widgets/header";
+import WidthContainer from "./components/widthContainer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+ 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header/>
+      <WidthContainer>
+        <div className="home-container">
+          <h1 className="home-title">
+            Bem vindo à Akademika
+          </h1>
+          <h2 className="home-subtitle">Estude do seu jeito, no seu ritmo</h2>
+          <p className="home-paragraph">
+            mantenha seus estudos sob seu controle,<br></br> sem dores de cabeça
+          </p>
+          <a className="home-cta" href="">Comece agora</a>
+        </div>
+        <div className="home-image-bg">
+          <img src="images/home-ilustration.png" alt="Ilustração de um mulher com mochila nas costas segurando uma pilha de livros" />
+        </div>
+       
+      </WidthContainer>
     </>
   );
 }
