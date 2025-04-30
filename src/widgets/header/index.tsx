@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./header.module.scss";
 import WidthContainer from "../../components/widthContainer";
+import { UserData } from "../../contexts/usuario";
 
 interface IHeader {
   isAutenticated?: boolean;
@@ -50,7 +51,7 @@ const Header = ({ isAutenticated = false }: IHeader) => {
       <WidthContainer>
         <div className={styles["header"]}>
           <div className={styles["header__logo"]}>
-            <img width={120} height={125} src="images/akademika-logo.svg" alt="Logo" />
+            <img width={120} height={125} src="/images/akademika-logo.svg" alt="Logo" />
           </div>
           <nav className={styles["header__nav"]}>
             <ul>
