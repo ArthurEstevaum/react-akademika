@@ -41,4 +41,8 @@ O perfil de disciplina é responsável por mostrar ao usuário quais são as inf
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
+Pair programming: Não foi usado na maior parte dos nossos processos em razão do conflito de horários com os membros. Optamos por alinhamentos assíncronos na maior parte do desenvolvimento (O que se mostrou bem efetivo).
+![Imagem da reunião do grupo](https://github.com/user-attachments/assets/c2082936-9a35-4650-bc21-d0d8ee00ecee)
+
+
 
