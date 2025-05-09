@@ -11,7 +11,7 @@ interface ISimpleForm{
     fields: ITextInput[];
     children?: React.ReactNode;
     submitText: string;
-    onSubmit: (data: any) => void;
+    onSubmit: (data: object) => void;
 }
 
 function SimpleForm({ fields, children, submitText, onSubmit }: ISimpleForm) {

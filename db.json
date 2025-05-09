@@ -1,0 +1,13 @@
+{
+  "subjects": [
+    {
+      "name": "fundamentos de programação",
+      "status": "concluído",
+      "quarter": "1",
+      "teacher": "Aêda Monalisa",
+      "schedule": ["Quinta-feira"],
+      "syllabus": "Lorem ipsum dolor sit amet.",
+      "deadlines": [{"name": "prova AV1", "date": "2024-09-25"}, {"name": "Lista de exercícios 1", "date": "2024-10-06"}]
+    }
+  ]
+}

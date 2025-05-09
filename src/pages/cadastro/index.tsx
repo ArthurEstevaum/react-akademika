@@ -1,9 +1,7 @@
-import React from "react";
 import WidthContainer from "../../components/widthContainer";
 import FormContainer from "../../components/formContainer";
 import SimpleForm from "../../widgets/simpleForm";
 import { ITextInput } from "../../interfaces/ITextInput";
-import styles from './cadastro.module.scss';
 
 const Cadastro = () => {
   //   @ts-ignore

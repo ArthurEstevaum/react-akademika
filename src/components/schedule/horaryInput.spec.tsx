@@ -31,6 +31,7 @@ describe("Horary input component", () => {
     await waitFor(() => {
       expect(mockSubmit).toHaveBeenCalledOnce();
     });
+
     expect(mockSubmit).toHaveBeenCalledWith(
       { days: ["Segunda-feira"] },
       expect.any(Object)

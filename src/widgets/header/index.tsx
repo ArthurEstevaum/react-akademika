@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./header.module.scss";
 import WidthContainer from "../../components/widthContainer";
 import { UserData } from "../../contexts/usuario";
@@ -15,11 +15,11 @@ const Header = ({ isAutenticated = false }: IHeader) => {
     },
     {
       title: "Login",
-      href: "/",
+      href: "/login",
     },
     {
       title: "Cadastre-se",
-      href: "/",
+      href: "/cadastro",
     },
   ];
   const autenticatedMenuOptions = [
