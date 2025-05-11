@@ -23,6 +23,7 @@ const TextInput = ({
             id={fieldName}
             type={type}
             {...register(fieldName, { required })}
+            className={errors[fieldName]? styles["errorRing"] : ""}
             placeholder={placeholder}
           />
           {errors[fieldName] && (

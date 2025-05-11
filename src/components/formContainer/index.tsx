@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./formContainer.module.scss";
+import logo from "../../assets/akademika-logo.svg"
 
 interface IFormContainer {
   children?: React.ReactNode;
@@ -11,7 +12,7 @@ const FormContainer = ({ children, message }: IFormContainer) => {
     <section className={styles["form-container__section"]}>
       {message && (
         <div className={styles["form-header"]}>
-          <img src="images/akademika-logo.svg" alt="Logo" />
+          <img width={96} src={logo} alt="Logo" />
           <span>{message}</span>
         </div>
       )}
