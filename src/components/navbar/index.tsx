@@ -12,7 +12,7 @@ export default function NavBar() {
         <header className={styles["container"]}>
         <nav className={styles["nav"]}>
             <div className={styles["separator"]}>
-                <img src="images/akademika-logo.svg" alt="Akademika logo" className={styles["logo"]} />
+                <img src="/images/akademika-logo.svg" alt="Akademika logo" className={styles["logo"]} />
                 <section className={`${styles["link-group"]} ${dropMenu? styles["drop-menu"] : ""}`}>
                     <span className={styles["link-wrapper"]} onClick={() => setDropMenu(!dropMenu)}>
                         <NavLink className={styles["link"]} to="/" id={styles["first-link"]}>Início</NavLink>

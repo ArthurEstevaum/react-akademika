@@ -10,6 +10,8 @@
   --blue: #7198b5;
   --white: #f0f0f0;
   --gray: #8e8e8e;
+  --color-gray: #7c7c7c;
+  --light-gray: #dddddd;
   --background-gray: #e9e9e9;
   --off-white: #e5e5e5;
   --off-blue: #a0c8f2;
@@ -103,7 +105,6 @@ button:focus-visible {
   color: var(--blue) !important;
   border-bottom: 3px solid var(--blue);
 }
-
 
 #app {
   max-width: 1920px;

@@ -5,7 +5,8 @@ import './index.css'
 import App from './App.tsx'
 import Cadastro from './pages/cadastro/index.tsx';
 import Login from './pages/login/index.tsx';
-import NovaDisciplina from './pages/disciplinas/nova-disciplina/index.tsx';
+import NovaDisciplina from './pages/disciplinas/newSubject/index.tsx';
+import SubjectProfile from './pages/disciplinas/subjectProfile/index.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/cadastro" element={<Cadastro/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/disciplinas/nova-disciplina" element={<NovaDisciplina/>}/>
+        <Route path='/disciplinas/perfil' element={<SubjectProfile />} />
       </Routes>
     </Router>
     
