@@ -1,0 +1,15 @@
+.container {
+  border-radius: 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 80%;
+  background-color: var(--white);
+  padding: 32px 96px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 32px;
+  }
+}
