@@ -1,1 +1,1 @@
-export type Deadline = { name: string, date: Date }
+export type Deadline = { name: string, date: string }

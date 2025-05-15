@@ -1,20 +1,22 @@
 import { describe, expect, it, vi } from "vitest";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { Days } from "../../types/days.ts";
 import HoraryInput from "./HoraryInput.tsx";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
 const mockSubmit = vi.fn();
 type FormValues = {
+  name: string;
   days: Days[];
 };
 
 const Wrapper = () => {
-  const { control, handleSubmit } = useForm<FormValues>();
+  const { control, handleSubmit, register } = useForm<FieldValues>();
 
   return (
     <form onSubmit={handleSubmit(mockSubmit)}>
       <HoraryInput name="days" control={control} />
+      <input type="text" {...register("name")} />
       <input type="submit" aria-label="submitInput" />
     </form>
   );

@@ -10,6 +10,7 @@ interface IFormContainer {
 const FormContainer = ({ children, message }: IFormContainer) => {
   return (
     <section className={styles["form-container__section"]}>
+      <div className={styles["container-decoration"]}></div>
       {message && (
         <div className={styles["form-header"]}>
           <img width={96} src={logo} alt="Logo" />

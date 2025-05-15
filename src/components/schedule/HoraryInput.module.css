@@ -4,13 +4,15 @@
 }
 .day {
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   padding: 15px;
   border-right: 1px solid var(--white);
   transition: 500ms ease-in-out;
 }
 .container {
+  margin-bottom: 16px;
+  width: 80%;
   display: flex;
   border: 2px solid var(--white);
   border-radius: 16px;

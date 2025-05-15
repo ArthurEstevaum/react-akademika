@@ -5,10 +5,11 @@ import './index.css'
 import App from './App.tsx'
 import Cadastro from './pages/cadastro/index.tsx';
 import Login from './pages/login/index.tsx';
-import NovaDisciplina from './pages/disciplinas/newSubject/index.tsx';
+import NovaDisciplina from './pages/disciplinas/novaDisciplina/index.tsx';
 import SubjectProfile from './pages/disciplinas/subjectProfile/index.tsx';
 import Contact from './pages/contact/index.tsx';
 import About from './pages/about/index.tsx';
+import NewSubject from './pages/disciplinas/newSubject/index.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/disciplinas/perfil' element={<SubjectProfile />} />
         <Route path='/contato' element={<Contact />} />
         <Route path='/sobre' element={<About />} />
+        <Route path='/teste-form' element={<NewSubject />} />
       </Routes>
     </Router>
     
