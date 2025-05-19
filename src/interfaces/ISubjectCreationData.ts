@@ -8,6 +8,6 @@ export interface ISubjectCreationData {
     quarter: number,
     teacher?: string,
     syllabus?: string,
-    schedule: Days[],
+    days: Days[],
     deadlines: Deadline[]
 }

@@ -6,8 +6,8 @@ import { ISubjectCreationData } from "../../interfaces/ISubjectCreationData.ts";
 
 export type FormValues = any;
 
-export default function HoraryInput(props: UseControllerProps<FieldValues>, error: boolean = false) {
-  const { field } = useController(props);
+export default function HoraryInput(props: UseControllerProps<ISubjectCreationData>) {
+  const { field, fieldState } = useController(props);
   const [daysSelected, setDaysSelected] = useState<Days[]>([]);
   function togglePickedDay(dayValue: Days) {
     if (daysSelected.includes(dayValue)) {
@@ -21,7 +21,7 @@ export default function HoraryInput(props: UseControllerProps<FieldValues>, erro
   }
 
   return (
-    <div className={`${styles.container} ${error? styles.errorRing : ""}`}>
+    <div className={`${styles.container} ${fieldState.invalid? styles.errorRing : ""}`}>
       <div className={`${styles.day} ${daysSelected.includes("Segunda-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Segunda-feira")}>Segunda</div>
       <div className={`${styles.day} ${daysSelected.includes("Terça-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Terça-feira")}>Terça</div>
       <div className={`${styles.day} ${daysSelected.includes("Quarta-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Quarta-feira")}>Quarta</div>

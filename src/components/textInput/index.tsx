@@ -3,33 +3,46 @@ import {
   ITextInput,
   ITextInputWithSettings,
 } from "../../interfaces/ITextInput";
+import { FieldError } from "react-hook-form";
+
+interface ClassNameProp {
+  className?: string
+}
 
 const TextInput = ({
   type = "text",
   register,
-  required = false,
+  registerOptions = { required: false },
   placeholder,
   fieldName,
   label,
   errors,
   href = "",
-}: ITextInputWithSettings) => {
+  defaultValue,
+  className = ""
+}: ITextInputWithSettings & ClassNameProp) => {
+
+  function getInputErrors (obj: typeof errors, path: string) : FieldError | undefined {
+    return path.split(".").reduce((acc, key) => acc?.[key], obj);
+  };
+
   return (
     <>
       {type !== "checkbox" ? (
-        <div className={styles["text-input__container"]}>
+        <div className={`${className} ${styles["text-input__container"]}`}>
           <label htmlFor={fieldName}>{label}</label>
           <input
+            defaultValue={defaultValue}
             id={fieldName}
             type={type}
-            {...register(fieldName, { required })}
-            className={errors[fieldName]? styles["errorRing"] : ""}
+            {...register(fieldName, registerOptions)}
+            className={getInputErrors(errors, fieldName) ? styles["errorRing"] : ""}
             placeholder={placeholder}
           />
-          {errors[fieldName] && (
+          {getInputErrors(errors, fieldName) && (
             <span
               style={{ color: "#ff0000" }}
-            >{`*O ${label.toLowerCase()} é obrigatório`}</span>
+            >{getInputErrors(errors, fieldName)?.message == "" ? `*O ${label.toLowerCase()} é obrigatório` : getInputErrors(errors, fieldName)?.message}</span>
           )}
         </div>
       ) : (
@@ -37,11 +50,11 @@ const TextInput = ({
           <input
             id={fieldName}
             type={type}
-            {...register(fieldName, { required })}
+            {...register(fieldName, registerOptions)}
             placeholder={placeholder}
           />
           <a href={href}>{label}</a>
-          {errors[fieldName] && (
+          {getInputErrors(errors, fieldName) && (
             <span
               style={{ color: "#ff0000" }}
             >{`*O '${label.toLowerCase()}' é obrigatório`}</span>

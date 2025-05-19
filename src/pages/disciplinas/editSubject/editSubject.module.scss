@@ -106,6 +106,23 @@
   margin-top: 36px;
 }
 
+.nova-disciplina__back-btn {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding-inline: 36px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 12px auto;
+  border-radius: 16px;
+  background-color: var(--white);
+  color: var(--blue);
+  border: none;
+  cursor: pointer;
+}
+
 .nova-disciplina__step-btn {
   display: flex;
   width: 100%;
@@ -253,7 +270,7 @@
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
   align-items: stretch;
   justify-content: stretch;
 
@@ -338,4 +355,8 @@
     color: #7198b5;
     font-size: 24px;
   }
+}
+
+.date-input {
+  width: 28% !important;
 }

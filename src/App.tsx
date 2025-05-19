@@ -16,7 +16,7 @@ function App() {
           <p className="paragraph">
             mantenha seus estudos sob seu controle, sem dores de cabeça.
           </p>
-          <button className="primary-button">Comece agora</button>
+          <button className="primary-button">Saiba mais</button>
         </div>
         <img
           className="image"

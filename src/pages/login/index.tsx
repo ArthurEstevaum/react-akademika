@@ -14,13 +14,13 @@ const Login = () => {
     {
       label: "Login",
       fieldName: "login",
-      required: true,
+      registerOptions: { required: true }
     },
     {
       type: "password",
       label: "Senha",
       fieldName: "password",
-      required: true,
+      registerOptions: { required: true }
     },
   ];
   return (

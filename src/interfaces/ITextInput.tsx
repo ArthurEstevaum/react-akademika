@@ -1,16 +1,17 @@
-import { FieldValues, UseFormRegister } from "react-hook-form";
+import { FieldValues, RegisterOptions, UseFormRegister } from "react-hook-form";
 
 export interface ITextInput {
     type?: string;
     placeholder?: string;
-    required?: boolean;
+    registerOptions: RegisterOptions
     label: string;
     fieldName: string;
     href?: string;
+    defaultValue?: string;
 }
 
 export interface ITextInputWithSettings extends ITextInput{
-    register: UseFormRegister<FieldValues>;
+    register: any;
     errors?: any
 }
   

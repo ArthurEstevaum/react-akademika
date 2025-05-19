@@ -12,25 +12,25 @@ const Cadastro = () => {
     {
       label: "Nome",
       fieldName: "name",
-      required: true,
+      registerOptions: { required: true },
     },
     {
       type: "email",
       label: "E-mail",
       fieldName: "email",
-      required: true,
+      registerOptions: { required: true },
     },
     {
       type: "password",
       label: "Senha",
       fieldName: "password",
-      required: true,
+      registerOptions: { required: true },
     },
     {
       type: "checkbox",
       label: "Termos de serviço",
       fieldName: "termos-e-servico",
-      required: true,
+      registerOptions: { required: true },
       href: "/termos-e-servico",
     },
   ];

@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^5.0.1",
     "@tanstack/react-query": "^5.69.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "@types/node": "^22.15.18",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

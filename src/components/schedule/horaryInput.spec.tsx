@@ -3,6 +3,7 @@ import { FieldValues, useForm } from "react-hook-form";
 import { Days } from "../../types/days.ts";
 import HoraryInput from "./HoraryInput.tsx";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { ISubjectCreationData } from "../../interfaces/ISubjectCreationData.ts";
 
 const mockSubmit = vi.fn();
 type FormValues = {
@@ -11,7 +12,7 @@ type FormValues = {
 };
 
 const Wrapper = () => {
-  const { control, handleSubmit, register } = useForm<FieldValues>();
+  const { control, handleSubmit, register } = useForm<ISubjectCreationData>();
 
   return (
     <form onSubmit={handleSubmit(mockSubmit)}>

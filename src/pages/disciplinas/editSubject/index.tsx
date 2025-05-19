@@ -1,31 +1,42 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import FormContainer from "../../../components/formContainer";
-import styles from "./novaDisciplina.module.scss";
+import styles from "./editSubject.module.scss";
 import { useFieldArray, useForm } from "react-hook-form";
 import TextInput from "../../../components/textInput";
 import NavBar from "../../../components/navbar";
 import HoraryInput from "../../../components/schedule/HoraryInput";
-import { Days } from "../../../types/days";
 import { ISubjectCreationData } from "../../../interfaces/ISubjectCreationData";
-import createSubject from "../../../services/subjects/createSubject";
+import { Link, useParams } from "react-router";
+import { useSubject } from "../../../services/subjects/getSubjectInfo";
+import editSubject from "../../../services/subjects/editSubject";
 
-interface IDisciplines {
-  name: string;
-  date: string;
-}
+export default function EditSubject() {
+  const { subjectId } = useParams();
+  const { data: subject, isLoading, error } = useSubject(subjectId ?? "");
 
-const NovaDisciplina = () => {
   const {
     register,
     handleSubmit,
     control,
-    watch,
+    watch,  
+    reset,
     formState: { errors, isValid },
   } = useForm<ISubjectCreationData>({
     defaultValues: {
-      deadlines: [{ name: "", date: "" }],
+      deadlines: subject?.deadlines,
+      days: subject?.days,
+      name: subject?.name,
+      quarter: subject?.quarter,
+      status: subject?.status,
+      syllabus: subject?.syllabus,
+      teacher: subject?.teacher,
     },
   });
+
+  //Fetch the default values for the form be filled
+  useEffect(() => {
+    reset(subject);
+  }, [reset, subject]);
 
   const { fields, append, remove } = useFieldArray({
     control,
@@ -34,25 +45,25 @@ const NovaDisciplina = () => {
 
   const deadlinesInputs = watch("deadlines");
 
-  const [disciplineCreated, setDisciplineCreated] = useState<boolean>(false);
+  const [subjectEdited, setsubjectEdited] = useState<boolean>(false);
 
   const [inputActive, setInputActive] = useState<number>(0);
 
   function nextBtn() {
     if (inputActive == 2) {
-      setDisciplineCreated(true);
+      setsubjectEdited(true);
       return;
     }
+    //Prevents user for advancing the form in an invalid state
     if (!isValid) return;
     setInputActive((inputActive) => inputActive + 1);
   }
 
   const onSubmit = (data: ISubjectCreationData) => {
     if (inputActive == 2) {
-      const response = createSubject(data)
-      setDisciplineCreated(true);
+      const response = editSubject(subjectId?? "", data);
+      setsubjectEdited(true);
     }
-    console.log(data);
   };
 
   return (
@@ -60,11 +71,11 @@ const NovaDisciplina = () => {
       <NavBar />
       <FormContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
-          {!disciplineCreated ? (
+          {!subjectEdited ? (
             <>
               <div className={styles["nova-disciplina"]}>
                 <div className={styles["nova-disciplina__header"]}>
-                  <h2>Criar nova disciplina</h2>
+                  <h2>Editar disciplina</h2>
                   <span>
                     mantenha provas, conteúdos e atividades sob seu controle
                   </span>
@@ -84,7 +95,7 @@ const NovaDisciplina = () => {
                           register={register}
                           label="Período"
                           type="number"
-                          registerOptions={{ required: true }}
+                          registerOptions={{ required: true, max: 8, min: 1 }}
                           fieldName="quarter"
                           errors={errors}
                         />
@@ -94,6 +105,7 @@ const NovaDisciplina = () => {
                         <ul>
                           <label>
                             <input
+                              defaultChecked={subject?.status == "cursando"}
                               type="radio"
                               style={
                                 errors.status && {
@@ -107,6 +119,7 @@ const NovaDisciplina = () => {
                           </label>
                           <label>
                             <input
+                              defaultChecked={subject?.status == "não iniciado"}
                               type="radio"
                               style={
                                 errors.status && {
@@ -120,6 +133,7 @@ const NovaDisciplina = () => {
                           </label>
                           <label>
                             <input
+                              defaultChecked={subject?.status == "concluído"}
                               type="radio"
                               style={
                                 errors.status && {
@@ -164,7 +178,8 @@ const NovaDisciplina = () => {
                           Plano de classe (opcional)
                         </span>
                         <p className={styles["step2-form-subtitle"]}>
-                          Adicione datas importantes como provas e entregas de projeto
+                          Adicione datas importantes como provas e entregas de
+                          projeto
                         </p>
                         <div className={styles["nova-disciplina__exams"]}>
                           {fields.map((field, index) => {
@@ -194,6 +209,7 @@ const NovaDisciplina = () => {
                                   fieldName={`deadlines.${index}.date`}
                                   placeholder="29/05/2025"
                                   errors={errors}
+                                  className={styles["date-input"]}
                                   registerOptions={{
                                     required:
                                       deadlinesInputs[index].name !== "",
@@ -245,7 +261,8 @@ const NovaDisciplina = () => {
                           Ementa (opcional)
                         </span>
                         <p className={styles["step2-form-subtitle"]}>
-                          Adicione os assuntos e tópicos da disciplina, quanto mais detalhado, melhor
+                          Adicione os assuntos e tópicos da disciplina, quanto
+                          mais detalhado, melhor
                         </p>
                         <textarea
                           placeholder="Ex: Matemática básica; noção de limites; introdução a derivadas..."
@@ -257,12 +274,17 @@ const NovaDisciplina = () => {
                   )}
                 </div>
                 <div className={styles["nova-disciplina__footer"]}>
+                  <Link to={`/disciplinas/${subjectId}`}>
+                    <button className={styles["nova-disciplina__back-btn"]}>
+                      Voltar
+                    </button>
+                  </Link>
                   {inputActive == 2 && (
                     <button
                       className={styles["nova-disciplina__step-btn"]}
                       type="submit"
                     >
-                      Criar
+                      Editar
                     </button>
                   )}
                   {inputActive != 2 && (
@@ -323,21 +345,21 @@ const NovaDisciplina = () => {
                   fill="#71B595"
                 />
               </svg>
-              <p>Disciplina criada com sucesso!</p>
+              <p>Disciplina editada com sucesso!</p>
 
-              <button
-                className={styles["nova-disciplina__step-btn"]}
-                type="button"
-              >
-                Ir para minha disciplina
-              </button>
-              <a href="">Voltar para meu dashboard</a>
+              <Link to={`/disciplinas/${subjectId}`}>
+                <button
+                  className={styles["nova-disciplina__step-btn"]}
+                  type="button"
+                >
+                  Ir para minha disciplina
+                </button>
+              </Link>
+              <Link to="/disciplinas">Voltar para o dashboard</Link>
             </div>
           )}
         </form>
       </FormContainer>
     </>
   );
-};
-
-export default NovaDisciplina;
+}

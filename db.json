@@ -5,9 +5,64 @@
       "status": "concluído",
       "quarter": "1",
       "teacher": "Aêda Monalisa",
-      "schedule": ["Quinta-feira"],
+      "days": [
+        "Quinta-feira"
+      ],
       "syllabus": "Lorem ipsum dolor sit amet.",
-      "deadlines": [{"name": "prova AV1", "date": "2024-09-25"}, {"name": "Lista de exercícios 1", "date": "2024-10-06"}]
+      "deadlines": [
+        {
+          "name": "prova AV1",
+          "date": "2024-09-25"
+        },
+        {
+          "name": "Lista de exercícios 1",
+          "date": "2024-10-06"
+        }
+      ],
+      "id": "48f0"
+    },
+    {
+      "id": "9d91",
+      "deadlines": [
+        {
+          "name": "Prova 1",
+          "date": "02/09/2025"
+        },
+        {
+          "name": "Prova 2",
+          "date": "07/12/2025"
+        },
+        {
+          "name": "Projeto 1",
+          "date": "12/09/2025"
+        }
+      ],
+      "status": "concluído",
+      "name": "Matemática para computação",
+      "quarter": "1",
+      "teacher": "João Neves",
+      "days": [
+        "Quinta-feira"
+      ],
+      "syllabus": "Noção de limites, introdução a derivadas e integrais, matrizes"
+    }
+  ],
+  "users": [
+    {
+      "username": "exampleUser",
+      "email": "user@example.com",
+      "password": "examplePassword321"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Fibonacci em python",
+      "date": "12/04/2025",
+      "description": "Lorem ipsum dolor sit amet",
+      "status": "a fazer",
+      "priority": "alta",
+      "difficulty": "difícil",
+      "subjectId": "48f0"
     }
   ]
 }

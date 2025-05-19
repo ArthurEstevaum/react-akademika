@@ -1,12 +1,9 @@
+import { apiBaseUrl } from '../service.config';
 import { ISubjectCreationData } from "../../interfaces/ISubjectCreationData";
 
-export default async function createSubject(baseUrl: string, data: ISubjectCreationData) {
-    const fetchOptions = {
+export default async function createSubject(data: ISubjectCreationData) {
+    return await fetch(`${apiBaseUrl}/subjects`, {
         method: "POST",
         body: JSON.stringify(data)
-    }
-
-    const response = await fetch(`${baseUrl}/disciplinas/criar`, fetchOptions)
-
-    return response
+    })
 }
