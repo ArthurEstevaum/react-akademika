@@ -8,11 +8,7 @@ import HoraryInput from "../../../components/schedule/HoraryInput";
 import { Days } from "../../../types/days";
 import { ISubjectCreationData } from "../../../interfaces/ISubjectCreationData";
 import createSubject from "../../../services/subjects/createSubject";
-
-interface IDisciplines {
-  name: string;
-  date: string;
-}
+import { Link } from "react-router";
 
 const NovaDisciplina = () => {
   const {
@@ -49,10 +45,9 @@ const NovaDisciplina = () => {
 
   const onSubmit = (data: ISubjectCreationData) => {
     if (inputActive == 2) {
-      const response = createSubject(data)
+      const response = createSubject(data);
       setDisciplineCreated(true);
     }
-    console.log(data);
   };
 
   return (
@@ -164,7 +159,8 @@ const NovaDisciplina = () => {
                           Plano de classe (opcional)
                         </span>
                         <p className={styles["step2-form-subtitle"]}>
-                          Adicione datas importantes como provas e entregas de projeto
+                          Adicione datas importantes como provas e entregas de
+                          projeto
                         </p>
                         <div className={styles["nova-disciplina__exams"]}>
                           {fields.map((field, index) => {
@@ -245,7 +241,8 @@ const NovaDisciplina = () => {
                           Ementa (opcional)
                         </span>
                         <p className={styles["step2-form-subtitle"]}>
-                          Adicione os assuntos e tópicos da disciplina, quanto mais detalhado, melhor
+                          Adicione os assuntos e tópicos da disciplina, quanto
+                          mais detalhado, melhor
                         </p>
                         <textarea
                           placeholder="Ex: Matemática básica; noção de limites; introdução a derivadas..."
@@ -325,13 +322,14 @@ const NovaDisciplina = () => {
               </svg>
               <p>Disciplina criada com sucesso!</p>
 
-              <button
-                className={styles["nova-disciplina__step-btn"]}
-                type="button"
-              >
-                Ir para minha disciplina
-              </button>
-              <a href="">Voltar para meu dashboard</a>
+              <Link to="/disciplinas">
+                <button
+                  className={styles["nova-disciplina__step-btn"]}
+                  type="button"
+                >
+                  Voltar para o dashboard
+                </button>
+              </Link>
             </div>
           )}
         </form>

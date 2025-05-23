@@ -1,7 +1,7 @@
 {
   "subjects": [
     {
-      "name": "fundamentos de programação",
+      "name": "Fundamentos de Programação",
       "status": "concluído",
       "quarter": "1",
       "teacher": "Aêda Monalisa",
@@ -12,11 +12,11 @@
       "deadlines": [
         {
           "name": "prova AV1",
-          "date": "2024-09-25"
+          "date": "25/09/2024"
         },
         {
           "name": "Lista de exercícios 1",
-          "date": "2024-10-06"
+          "date": "10/06/2024"
         }
       ],
       "id": "48f0"
@@ -45,13 +45,45 @@
         "Quinta-feira"
       ],
       "syllabus": "Noção de limites, introdução a derivadas e integrais, matrizes"
+    },
+    {
+      "id": "210d",
+      "deadlines": [
+        {
+          "name": "Entrega projeto",
+          "date": "28/05/2025"
+        }
+      ],
+      "status": "cursando",
+      "name": "Lógica para computação",
+      "quarter": "2",
+      "teacher": "Guilherme Cavalcanti",
+      "days": [
+        "Terça-feira"
+      ],
+      "syllabus": "Lógica de predicados, tableau, indução e dedução, silogismos, contradições e tautologia, conectivos lógicos."
+    },
+    {
+      "id": "8fb2",
+      "deadlines": [
+        {
+          "name": "",
+          "date": ""
+        }
+      ],
+      "status": "não iniciado",
+      "name": "Estruturas de dados",
+      "quarter": "3",
+      "teacher": "Maurício Júnior",
+      "syllabus": "Estruturas de dados e algoritmos."
     }
   ],
   "users": [
     {
       "username": "exampleUser",
       "email": "user@example.com",
-      "password": "examplePassword321"
+      "password": "examplePassword321",
+      "id": "08c7"
     }
   ],
   "activities": [
@@ -62,7 +94,8 @@
       "status": "a fazer",
       "priority": "alta",
       "difficulty": "difícil",
-      "subjectId": "48f0"
+      "subjectId": "48f0",
+      "id": "633b"
     }
   ]
 }

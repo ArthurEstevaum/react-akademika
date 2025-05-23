@@ -13,6 +13,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./services/queryClient.ts";
 import EditSubject from "./pages/disciplinas/editSubject/index.tsx";
 import DeleteSubject from "./pages/disciplinas/deleteSubject/index.tsx";
+import SubjectDashboard from "./pages/disciplinas/dashboard/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<App />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/disciplinas" element={<SubjectDashboard />} />
           <Route path="/disciplinas/criar" element={<NovaDisciplina />} />
           <Route path="/disciplinas/editar/:subjectId" element={<EditSubject />} />
           <Route path="/disciplinas/excluir/:subjectId" element={<DeleteSubject />} />

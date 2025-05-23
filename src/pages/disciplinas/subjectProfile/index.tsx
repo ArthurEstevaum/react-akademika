@@ -89,8 +89,26 @@ export default function SubjectProfile() {
             onChange={(e) => setDeadlineSearch(e.target.value)}
           />
 
+          {deadlineSearch !== "" && (
+            <button
+              style={{ backgroundColor: "transparent", padding: "6px" }}
+              onClick={() => {
+                setDeadlineSearch("");
+                setDeadlinesToShow(
+                  (currentDeadlines) => subject?.deadlines ?? currentDeadlines
+                );
+              }}
+            >
+              <img
+                width={36}
+                style={{ padding: "6px" }}
+                src="/images/close.svg"
+                alt="clear search"
+              />
+            </button>
+          )}
           <button
-            style={{ backgroundColor: "transparent" }}
+            style={{ backgroundColor: "transparent", padding: "6px" }}
             onClick={() => {
               const filteredDeadlines = subject?.deadlines.filter((deadline) =>
                 deadline.name.toLowerCase().includes(deadlineSearch)

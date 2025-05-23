@@ -16,7 +16,7 @@ export default function NavBar() {
                 <section className={`${styles["link-group"]} ${dropMenu? styles["drop-menu"] : ""}`}>
                     <span className={styles["link-wrapper"]} onClick={() => setDropMenu(!dropMenu)}>
                         <NavLink className={styles["link"]} to="/" id={styles["first-link"]}>Início</NavLink>
-                        <NavLink className={styles["link"]} to="/disciplinas/criar">Disciplinas</NavLink>
+                        <NavLink className={styles["link"]} to="/disciplinas">Disciplinas</NavLink>
                         <NavLink className={styles["link"]} to="/sobre">Sobre</NavLink>
                         <NavLink className={styles["link"]} to="/contato">Contato</NavLink>
                     </span>
