@@ -36,7 +36,6 @@ export default function Contact() {
 
   return (
     <>
-      <NavBar />
       <PageTitle message="Contato" />
       <ContentContainer>
         <h2 className={styles["subtitle"]}>Membros do projeto</h2>

@@ -6,7 +6,6 @@ import styles from "./about.module.css";
 export default function About() {
   return (
     <>
-      <NavBar />
       <PageTitle message="Sobre a Akademika" />
       <ContentContainer>
         <h2 className={styles["subtitle"]}>O problema</h2>

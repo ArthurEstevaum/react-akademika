@@ -18,7 +18,6 @@ export default function SubjectDashboard() {
 
   return (
     <>
-      <NavBar />
       <PageTitle message="Disciplinas" />
       <main className={styles["container"]}>
         <section className={styles["action-section"]}>

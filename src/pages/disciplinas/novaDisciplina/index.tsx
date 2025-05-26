@@ -79,7 +79,7 @@ const NovaDisciplina = () => {
                           register={register}
                           label="Período"
                           type="number"
-                          registerOptions={{ required: true }}
+                          registerOptions={{ required: true, min: 1, max: 10 }}
                           fieldName="quarter"
                           errors={errors}
                         />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./header.module.scss";
 import WidthContainer from "../../components/widthContainer";
-import { UserData } from "../../contexts/usuario";
+import { UserData } from "../../contexts/AuthProvider";
 
 interface IHeader {
   isAutenticated?: boolean;

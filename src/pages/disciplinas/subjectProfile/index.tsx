@@ -19,7 +19,6 @@ export default function SubjectProfile() {
 
   return (
     <>
-      <NavBar />
       <PageTitle message={subject?.name ?? ""} />
       <main className={styles["container"]}>
         <section className={styles["short-info"]}>

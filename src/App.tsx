@@ -1,5 +1,4 @@
 import "./App.css";
-import NavBar from "./components/navbar";
 import illustration from "./assets/illustration.svg";
 import darkIllustration from "./assets/darkIllustration.svg";
 import cloud from "./assets/cloud.svg";
@@ -10,7 +9,6 @@ import Depoimentos from "./depoimentos";
 function App() {
   return (
     <>
-      <NavBar />
       <main className="main">
         <div className="jumbotron">
           <h1 className="title">Bem vindo à Akademika</h1>
