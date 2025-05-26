@@ -4,6 +4,8 @@ import illustration from "./assets/illustration.svg";
 import darkIllustration from "./assets/darkIllustration.svg";
 import cloud from "./assets/cloud.svg";
 import chevron from "./assets/chevron.svg";
+import Carrossel from "./carrossel";
+import Depoimentos from "./depoimentos";
 
 function App() {
   return (
@@ -16,8 +18,11 @@ function App() {
           <p className="paragraph">
             mantenha seus estudos sob seu controle, sem dores de cabeça.
           </p>
-          <button className="primary-button">Saiba mais</button>
-        </div>
+          <div className="button-home">
+            <p className="button-paragraph"> De início a sua jornada:</p>
+            <button className="button-home-config">Começar Agora</button>
+          </div>
+        </div> 
         <img
           className="image"
           id="light-illustration"
@@ -45,6 +50,8 @@ function App() {
           />
         </a>
       </main>
+      <Carrossel />
+      <Depoimentos />
     </>
   );
 }
