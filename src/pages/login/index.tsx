@@ -48,9 +48,6 @@ const Login = () => {
       <FormContainer message="Olá! Seja bem vindo novamente!">
         {error && <p>Usuário ou senha incorretos</p>}
         <SimpleForm onSubmit={onSubmit} fields={fields} submitText="Entrar">
-          <a className={styles["forget-password-link"]} href="/forget-password">
-            Esqueci minha senha
-          </a>
         </SimpleForm>
       </FormContainer>
     </WidthContainer>
