@@ -15,6 +15,8 @@ import EditSubject from "./pages/disciplinas/editSubject/index.tsx";
 import DeleteSubject from "./pages/disciplinas/deleteSubject/index.tsx";
 import SubjectDashboard from "./pages/disciplinas/dashboard/index.tsx";
 import AuthProvider from "./contexts/AuthProvider.tsx";
+import ChatIa from "./pages/ChatIa/index.tsx";
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -32,6 +34,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/disciplinas/:subjectId" element={<SubjectProfile />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/sobre" element={<About />} />
+            <Route path="/chat-ia" element={<ChatIa />} />
           </Route>
         </Routes>
       </BrowserRouter>
