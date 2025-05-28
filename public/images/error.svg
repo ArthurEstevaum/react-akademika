@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="Error">
+  <g fill="#d85b53" class="color000000 svgShape">
+    <path d="M16 24h.5l-.5-.001V24z" fill="#d85b53" class="color000000 svgShape"></path>
+    <path d="M29.658 25.354 18.871 3.774a3.21 3.21 0 0 0-5.742 0L2.342 25.354A3.209 3.209 0 0 0 5.212 30h21.576a3.209 3.209 0 0 0 2.87-4.646ZM16 25a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm1-5a1 1 0 0 1-2 0v-8a1 1 0 0 1 2 0Z" fill="#d85b53" class="color000000 svgShape"></path>
+  </g>
+</svg>
