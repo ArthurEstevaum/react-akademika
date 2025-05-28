@@ -38,11 +38,11 @@ export default function NavBar() {
                 <NavLink className={styles["link"]} to="/disciplinas">
                   Disciplinas
                 </NavLink>
-                <NavLink className={styles["link"]} to="/sobre">
-                  Sobre
+                <NavLink className={styles["link"]} to="/wqewqeqw">
+                  IAkademika
                 </NavLink>
-                <NavLink className={styles["link"]} to="/contato">
-                  Contato
+                <NavLink className={styles["link"]} to="/sair">
+                  Sair
                 </NavLink>
               </span>
             </section>
@@ -63,11 +63,11 @@ export default function NavBar() {
                 >
                   Início
                 </NavLink>
-                <NavLink className={styles["link"]} to="/cadastro">
-                  Cadastro
-                </NavLink>
                 <NavLink className={styles["link"]} to="/login">
                   Login
+                </NavLink>
+                <NavLink className={styles["link"]} to="/cadastro">
+                  Cadastro
                 </NavLink>
               </span>
             </section>

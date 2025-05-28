@@ -17,6 +17,7 @@
 .link-wrapper {
   display: flex;
   justify-content: space-evenly;
+  gap: 12px;
   align-items: center;
 }
 
