@@ -38,7 +38,7 @@ export default function NavBar() {
                 <NavLink className={styles["link"]} to="/disciplinas">
                   Disciplinas
                 </NavLink>
-                <NavLink className={styles["link"]} to="/wqewqeqw">
+                <NavLink className={styles["link"]} to="/iakademika">
                   IAkademika
                 </NavLink>
                 <NavLink className={styles["link"]} to="/sair">

@@ -12,7 +12,7 @@ import editSubject from "../../../services/subjects/editSubject";
 
 export default function EditSubject() {
   const { subjectId } = useParams();
-  const { data: subject, isLoading, error } = useSubject(subjectId ?? "");
+  const { data: subject, isLoading, error } = useSubject(subjectId ?? "", localStorage.getItem("token") ?? "");
 
   const {
     register,
@@ -61,7 +61,7 @@ export default function EditSubject() {
 
   const onSubmit = (data: ISubjectCreationData) => {
     if (inputActive == 2) {
-      const response = editSubject(subjectId?? "", data);
+      const response = editSubject(subjectId?? "", data, localStorage.getItem("token") ?? "");
       setsubjectEdited(true);
     }
   };

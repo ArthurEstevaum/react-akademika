@@ -6,8 +6,8 @@ interface ISubjectInfo extends ISubjectCreationData {
     
 }
 
-export default async function getSubjectInfo(id: string) : Promise<ISubjectCreationData> {
-    const response =  await fetch(`${apiBaseUrl}/subjects/${id}`)
+export default async function getSubjectInfo(id: string, token: String) : Promise<ISubjectCreationData> {
+    const response =  await fetch(`${apiBaseUrl}/subjects/${id}`, { headers: { Authorization: `Bearer ${token}` } })
 
     if (!response.ok) {
         throw new Error("Erro ao buscar a disciplina");
@@ -16,9 +16,9 @@ export default async function getSubjectInfo(id: string) : Promise<ISubjectCreat
     return response.json()
 }
 
-export const useSubject = (id: string) => {
+export const useSubject = (id: string, token: String) => {
     return useQuery({
         queryKey: ["subject", id],
-        queryFn: () => getSubjectInfo(id),
+        queryFn: () => getSubjectInfo(id, token),
     });
 };

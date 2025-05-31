@@ -49,7 +49,7 @@ export default function DeleteSubject() {
               margin: "32px auto 0 auto",
             }}
             onClick={() => {
-              const response = deleteSubject(subjectId ?? "")
+              const response = deleteSubject(subjectId ?? "", localStorage.getItem("token") ?? "")
               setSubjectDeleted(true);
             }}
           >

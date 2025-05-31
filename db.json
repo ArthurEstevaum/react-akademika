@@ -22,31 +22,6 @@
       "id": "48f0"
     },
     {
-      "id": "9d91",
-      "deadlines": [
-        {
-          "name": "Prova 1",
-          "date": "02/09/2025"
-        },
-        {
-          "name": "Prova 2",
-          "date": "07/12/2025"
-        },
-        {
-          "name": "Projeto 1",
-          "date": "12/09/2025"
-        }
-      ],
-      "status": "concluído",
-      "name": "Matemática para computação",
-      "quarter": "1",
-      "teacher": "João Neves",
-      "days": [
-        "Quinta-feira"
-      ],
-      "syllabus": "Noção de limites, introdução a derivadas e integrais, matrizes"
-    },
-    {
       "id": "210d",
       "deadlines": [
         {

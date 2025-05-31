@@ -45,14 +45,13 @@ const NovaDisciplina = () => {
 
   const onSubmit = (data: ISubjectCreationData) => {
     if (inputActive == 2) {
-      const response = createSubject(data);
+      const response = createSubject(data, localStorage.getItem("token") ?? "");
       setDisciplineCreated(true);
     }
   };
 
   return (
     <>
-      <NavBar />
       <FormContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
           {!disciplineCreated ? (

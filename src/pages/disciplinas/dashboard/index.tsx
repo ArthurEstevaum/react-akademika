@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router";
 import { ISubjectWithId } from "../../../interfaces/ISubjectWithId";
 
 export default function SubjectDashboard() {
-  const { data: subjects, isLoading, error } = useSubjects();
+  const { data: subjects, isLoading, error } = useSubjects(localStorage.getItem("token") ?? "");
   const [subjectSearch, setSubjectSearch] = useState("");
   const [subjectsToShow, setSubjectsToShow] = useState<ISubjectWithId[]>([]);
 

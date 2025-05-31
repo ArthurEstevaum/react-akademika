@@ -10,7 +10,7 @@ import WidthContainer from "../../../components/widthContainer/index";
 export default function SubjectProfile() {
   const [deadlineSearch, setDeadlineSearch] = useState("");
   const { subjectId } = useParams();
-  const { data: subject, isLoading, error } = useSubject(subjectId ?? "");
+  const { data: subject, isLoading, error } = useSubject(subjectId ?? "", localStorage.getItem("token") ?? "");
   const [deadlinesToShow, setDeadlinesToShow] = useState<Deadline[]>([]);
 
   useEffect(() => {

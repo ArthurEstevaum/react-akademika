@@ -22,6 +22,7 @@ import SubjectDashboard from "./pages/disciplinas/dashboard/index.tsx";
 import AuthProvider from "./contexts/AuthProvider.tsx";
 import ProtectedPages from "./layout/ProtectedPages.tsx";
 import Logout from "./layout/Logout.tsx";
+import IAkademika from "./pages/iAkademika/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -36,6 +37,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/sobre" element={<About />} />
             <Route path="/sair" element={<Logout />} />
             <Route element={<ProtectedPages />}>
+              <Route path="/iakademika" element={<IAkademika />} />
               <Route path="/disciplinas" element={<SubjectDashboard />} />
               <Route path="/disciplinas/criar" element={<NovaDisciplina />} />
               <Route path="/disciplinas/editar/:subjectId" element={<EditSubject />} />
