@@ -263,3 +263,19 @@ body {
 .depoimento-image-wrapper {
   margin: 0 auto;
 }
+
+.error-message {
+  color: #ff6262;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 8px;
+  gap: 8px; 
+}
+
+.error-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0; 
+}
+
