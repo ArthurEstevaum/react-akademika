@@ -1,4 +1,5 @@
 import "./App.css";
+import 'react-loading-skeleton/dist/skeleton.css'
 import illustration from "./assets/illustration.svg";
 import darkIllustration from "./assets/darkIllustration.svg";
 import cloud from "./assets/cloud.svg";

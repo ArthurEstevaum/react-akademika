@@ -80,7 +80,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 1px auto var(--blue);
 }
 
 .card {
@@ -124,4 +124,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Largura para scroll vertical */
+  height: 12px; /* Altura para scroll horizontal */
+}
+
+/* 2. A pista (track) da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da pista */
+  border-radius: 10px; /* Bordas arredondadas para a pista */
+}
+
+/* 3. O polegar (thumb) - a parte que você arrasta */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Cor do polegar */
+  border-radius: 10px; /* Bordas arredondadas para o polegar */
+  border: 2px solid #f1f1f1; /* Opcional: cria um padding em volta do polegar */
+}
+
+/* 4. (Opcional) Efeito ao passar o mouse sobre o polegar */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor do polegar ao passar o mouse */
+}
+
+/* 6. (Opcional) O canto onde as barras se encontram */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* Geralmente a mesma cor do track */
 }
