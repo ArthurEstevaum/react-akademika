@@ -9,6 +9,7 @@ Já pensou em estruturar seus estudos de forma eficaz e com o uso de IA? Com a A
 [Link do figma](https://www.figma.com/design/q9mR5Wp2TJW44F6dgbJxMd/Akademika?node-id=44-21&t=scNMNx8ve1yYBw8p-0)
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
+[Link da apresentação](https://www.canva.com/design/DAGpHsDjYZk/guk5QJ28E735uNUbMpuuAg/edit)
 ## Sobre o projeto
 ![logo](https://github.com/user-attachments/assets/17fcbafc-b4b7-4306-ae2f-408124106195)
 
