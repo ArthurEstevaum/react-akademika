@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./iAkademika.module.css";
 import getPromptResponse from "../../services/iakademika/getPromptResponse";
 import getExerciseResponse from "../../services/iakademika/getExerciseResponse";
-import { exercise } from "../../types/exercise";
+import { exercise } from '../../types/exercise';
 import { summary } from "../../types/summary";
 import { prompt } from "../../types/prompt";
 import Skeleton from "react-loading-skeleton";
@@ -16,6 +16,7 @@ import {
   QuestionMarkCircledIcon,
 } from "@radix-ui/react-icons";
 import getSummaryResponse from "../../services/iakademika/getSummaryResponse";
+import Quiz from "./Quiz";
 
 export default function IAkademika() {
   const [promptInput, setPromptInput] = useState("");
@@ -23,7 +24,7 @@ export default function IAkademika() {
   const [processingResponse, setProcessingResponse] = useState(false);
   const [userInputs, setUserInputs] = useState<string[]>([]);
   const [inputMode, setInputMode] = useState<"prompt" | "exercise" | "summary">(
-    "exercise"
+    "prompt"
   );
   const [iAkademikaResponses, setIAkademikaResponses] = useState<
     Array<exercise | summary | prompt>
@@ -121,10 +122,7 @@ export default function IAkademika() {
                     </ReactMarkdown>
                   )}
                   {response.exercises && (
-                    <section>
-                      <h1>{response.topic}</h1>
-                      
-                    </section>
+                    <Quiz exercise={response} />
                   )}
                 </div>
               </div>

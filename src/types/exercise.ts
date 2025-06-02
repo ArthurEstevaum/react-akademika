@@ -3,7 +3,7 @@ export type exercise = {
   questions: question[]
 }
 
-type question = {
+export type question = {
   questionName: string;
   options: option[];
   correctAnswerLetter: "A" | "B" | "C" | "D" | "E";

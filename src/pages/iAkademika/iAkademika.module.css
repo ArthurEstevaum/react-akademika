@@ -104,7 +104,7 @@
   border-radius: 12px;
 }
 
-.userInputsSection h1 {
+.userInputsSection h1, h2 {
   font-weight: 500;
   color: var(--gray);
   font-size: 1rem;
@@ -139,6 +139,103 @@
   display: flex;
   gap: 12px;
   color: var(--blue);
+}
+
+.answerButton {
+  background-color: var(--blue);
+  color: var(--white);
+  margin-top: 12px;
+  &:disabled {
+    background-color: var(--gray);
+    cursor: default;
+  }
+}
+
+.exerciseContainer {
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.exerciseContainer h1 {
+  color: #213547;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.exerciseOption {
+  display: flex;
+  gap: 32px;
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 16px;
+  padding: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+  align-content: center;
+  max-width: 600px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--blue);
+    background-color: var(--light-gray);
+  }
+}
+
+.activeOption {
+  background-color: var(--blue);
+  color: var(--white);
+  &:hover {
+    border: 1px solid var(--white);
+    background-color: var(--blue);
+  }
+}
+
+.activeOption span {
+  color: var(--blue) !important;
+  background-color: var(--white) !important;
+}
+
+.exerciseStats {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.exerciseCorrectExplanation {
+  background-color: rgb(200, 255, 200);
+  color: rgb(0, 71, 0);
+  padding: 12px 24px;
+  border-radius: 16px;
+  width: 80%;
+}
+
+.exerciseIncorrectExplanation {
+  background-color: rgb(255, 196, 196);
+  color: rgb(177, 0, 0);
+  padding: 12px 24px;
+  border-radius: 16px;
+  width: 80%;
+}
+
+.exerciseOption p {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 80%;
+}
+
+.exerciseOption span {
+  color: var(--white);
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 100%;
+  background-color: var(--blue);
 }
 
 @media (max-width: 768px) {
