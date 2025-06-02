@@ -10,8 +10,8 @@ describe('Subject creation service', () => {
             teacher: "Prof. Carlos Silva",
             syllabus: "Fundamentos de algoritmos e linguagens de programação.",
             quarter: 1,
-            status: "cursando",
-            days: ["Segunda-feira", "Quarta-feira"],
+            status: "done",
+            days: ["MONDAY", "WEDNESDAY"],
             deadlines: [{ name: "Prova av2", date: "12/08/2025" }, { name: "crud em python", date: "02/07/2025" }],
         };
 

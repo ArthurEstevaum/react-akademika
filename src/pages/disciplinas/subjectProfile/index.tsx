@@ -25,13 +25,13 @@ export default function SubjectProfile() {
           <div className={styles["info-section-attribute"]}>
             <p>Status:</p>
             <p>{subject?.status}</p>
-            {subject?.status === "concluído" && (
+            {subject?.status === "done" && (
               <img width={32} src="/images/done.svg" alt="Done icon" />
             )}
-            {subject?.status === "não iniciado" && (
+            {subject?.status === "notStarted" && (
               <img width={32} src="/images/loading.svg" alt="Pending icon" />
             )}
-            {subject?.status === "cursando" && (
+            {subject?.status === "pending" && (
               <img
                 width={42}
                 src="/images/hourglass.svg"
