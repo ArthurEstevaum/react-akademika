@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import NavBar from "../../../components/navbar";
 import PageTitle from "../../../components/pageTitle";
 import styles from "./subjectDashboard.module.css";
 import { useSubjects } from "../../../services/subjects/getSubjects";
@@ -14,7 +13,7 @@ export default function SubjectDashboard() {
 
   useEffect(() => {
     setSubjectsToShow(subjects ?? []);
-  }, [isLoading]);
+  }, [isLoading, subjects]);
 
   return (
     <>
@@ -105,21 +104,21 @@ export default function SubjectDashboard() {
                 </div>
                 <div>
                   <div className={styles["subject-list-item__info-section"]}>
-                    {subject.status === "concluído" && (
+                    {subject.status === "done" && (
                       <img
                         width={24}
                         src="/images/done.svg"
                         alt="done subject icon"
                       />
                     )}
-                    {subject.status === "cursando" && (
+                    {subject.status === "pending" && (
                       <img
                         width={32}
                         src="/images/hourglass.svg"
                         alt="pending subject icon"
                       />
                     )}
-                    {subject.status === "não iniciado" && (
+                    {subject.status === "notStarted" && (
                       <img
                         width={24}
                         src="/images/loading.svg"

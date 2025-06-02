@@ -22,12 +22,12 @@ export default function HoraryInput(props: UseControllerProps<ISubjectCreationDa
 
   return (
     <div className={`${styles.container} ${fieldState.invalid? styles.errorRing : ""}`}>
-      <div className={`${styles.day} ${daysSelected.includes("Segunda-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Segunda-feira")}>Segunda</div>
-      <div className={`${styles.day} ${daysSelected.includes("Terça-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Terça-feira")}>Terça</div>
-      <div className={`${styles.day} ${daysSelected.includes("Quarta-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Quarta-feira")}>Quarta</div>
-      <div className={`${styles.day} ${daysSelected.includes("Quinta-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Quinta-feira")}>Quinta</div>
-      <div className={`${styles.day} ${daysSelected.includes("Sexta-feira") ? styles.active : ""}`} onClick={() => togglePickedDay("Sexta-feira")}>Sexta</div>
-      <div className={`${styles.day} ${daysSelected.includes("Sábado") ? styles.active : ""}`} onClick={() => togglePickedDay("Sábado")}>Sábado</div>
+      <div className={`${styles.day} ${daysSelected.includes("MONDAY") ? styles.active : ""}`} onClick={() => togglePickedDay("MONDAY")}>Segunda</div>
+      <div className={`${styles.day} ${daysSelected.includes("TUESDAY") ? styles.active : ""}`} onClick={() => togglePickedDay("TUESDAY")}>Terça</div>
+      <div className={`${styles.day} ${daysSelected.includes("WEDNESDAY") ? styles.active : ""}`} onClick={() => togglePickedDay("WEDNESDAY")}>Quarta</div>
+      <div className={`${styles.day} ${daysSelected.includes("THURSDAY") ? styles.active : ""}`} onClick={() => togglePickedDay("THURSDAY")}>Quinta</div>
+      <div className={`${styles.day} ${daysSelected.includes("FRIDAY") ? styles.active : ""}`} onClick={() => togglePickedDay("FRIDAY")}>Sexta</div>
+      <div className={`${styles.day} ${daysSelected.includes("SATURDAY") ? styles.active : ""}`} onClick={() => togglePickedDay("SATURDAY")}>Sábado</div>
     </div>
   );
 }

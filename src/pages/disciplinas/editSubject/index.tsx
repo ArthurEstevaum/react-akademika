@@ -9,16 +9,22 @@ import { ISubjectCreationData } from "../../../interfaces/ISubjectCreationData";
 import { Link, useParams } from "react-router";
 import { useSubject } from "../../../services/subjects/getSubjectInfo";
 import editSubject from "../../../services/subjects/editSubject";
+import { queryClient } from "../../../services/queryClient";
+import stringToDate from "../../../lib/stringToDate";
 
 export default function EditSubject() {
   const { subjectId } = useParams();
-  const { data: subject, isLoading, error } = useSubject(subjectId ?? "", localStorage.getItem("token") ?? "");
+  const {
+    data: subject,
+    isLoading,
+    error,
+  } = useSubject(subjectId ?? "", localStorage.getItem("token") ?? "");
 
   const {
     register,
     handleSubmit,
     control,
-    watch,  
+    watch,
     reset,
     formState: { errors, isValid },
   } = useForm<ISubjectCreationData>({
@@ -59,16 +65,26 @@ export default function EditSubject() {
     setInputActive((inputActive) => inputActive + 1);
   }
 
-  const onSubmit = (data: ISubjectCreationData) => {
+  const onSubmit = async (data: ISubjectCreationData) => {
     if (inputActive == 2) {
-      const response = editSubject(subjectId?? "", data, localStorage.getItem("token") ?? "");
-      setsubjectEdited(true);
+      console.log(data)
+      data.deadlines.forEach((deadline) => {
+        deadline.name = deadline.name;
+        deadline.date = stringToDate(deadline.date);
+      });
+      const response = await editSubject(
+        subjectId ?? "",
+        data,
+        localStorage.getItem("token") ?? ""
+      );
+      if (response.ok) setsubjectEdited(true);
+      queryClient.invalidateQueries({ queryKey: ["subjects"] });
+      return;
     }
   };
 
   return (
     <>
-      <NavBar />
       <FormContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
           {!subjectEdited ? (
@@ -105,7 +121,7 @@ export default function EditSubject() {
                         <ul>
                           <label>
                             <input
-                              defaultChecked={subject?.status == "cursando"}
+                              defaultChecked={subject?.status == "pending"}
                               type="radio"
                               style={
                                 errors.status && {
@@ -113,13 +129,13 @@ export default function EditSubject() {
                                 }
                               }
                               {...register("status", { required: true })}
-                              value="cursando"
+                              value="pending"
                             />
                             Cursando
                           </label>
                           <label>
                             <input
-                              defaultChecked={subject?.status == "não iniciado"}
+                              defaultChecked={subject?.status == "notStarted"}
                               type="radio"
                               style={
                                 errors.status && {
@@ -127,13 +143,13 @@ export default function EditSubject() {
                                 }
                               }
                               {...register("status", { required: true })}
-                              value="não iniciado"
+                              value="notStarted"
                             />
                             Não iniciado
                           </label>
                           <label>
                             <input
-                              defaultChecked={subject?.status == "concluído"}
+                              defaultChecked={subject?.status == "done"}
                               type="radio"
                               style={
                                 errors.status && {
@@ -141,7 +157,7 @@ export default function EditSubject() {
                                 }
                               }
                               {...register("status", { required: true })}
-                              value="concluído"
+                              value="done"
                             />
                             Concluído
                           </label>

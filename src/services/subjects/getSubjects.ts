@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { apiBaseUrl } from "../service.config";
 
 export default async function getSubjects(token: String) {
-  const response = await fetch(`${apiBaseUrl}/subjects`, { headers: { Authorization: `Bearer ${token}` } })
+  const response = await fetch(`${apiBaseUrl}/subjects/`, { headers: { Authorization: `Bearer ${token}`, "Content-type": "application/json" } })
 
   if(!response.ok) {
     throw new Error("Erro ao buscar as disciplinas")

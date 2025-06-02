@@ -9,6 +9,8 @@ import { Days } from "../../../types/days";
 import { ISubjectCreationData } from "../../../interfaces/ISubjectCreationData";
 import createSubject from "../../../services/subjects/createSubject";
 import { Link } from "react-router";
+import { queryClient } from "../../../services/queryClient";
+import stringToDate from "../../../lib/stringToDate";
 
 const NovaDisciplina = () => {
   const {
@@ -43,10 +45,22 @@ const NovaDisciplina = () => {
     setInputActive((inputActive) => inputActive + 1);
   }
 
-  const onSubmit = (data: ISubjectCreationData) => {
+  const onSubmit = async (data: ISubjectCreationData) => {
     if (inputActive == 2) {
-      const response = createSubject(data, localStorage.getItem("token") ?? "");
-      setDisciplineCreated(true);
+      console.log(data);
+      data.deadlines.forEach((deadline) => {
+        deadline.name = deadline.name;
+        deadline.date = stringToDate(deadline.date)
+      });
+      const response = await createSubject(
+        data,
+        localStorage.getItem("token") ?? ""
+      );
+      if (response.ok) {
+        setDisciplineCreated(true);
+      }
+      queryClient.invalidateQueries({ queryKey: ["subjects"] });
+      return;
     }
   };
 
@@ -95,7 +109,7 @@ const NovaDisciplina = () => {
                                 }
                               }
                               {...register("status", { required: true })}
-                              value="cursando"
+                              value="pending"
                             />
                             Cursando
                           </label>
@@ -108,7 +122,7 @@ const NovaDisciplina = () => {
                                 }
                               }
                               {...register("status", { required: true })}
-                              value="não iniciado"
+                              value="notStarted"
                             />
                             Não iniciado
                           </label>
@@ -121,7 +135,7 @@ const NovaDisciplina = () => {
                                 }
                               }
                               {...register("status", { required: true })}
-                              value="concluído"
+                              value="done"
                             />
                             Concluído
                           </label>

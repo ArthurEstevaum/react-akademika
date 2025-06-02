@@ -3,6 +3,7 @@ import FormContainer from "../../../components/formContainer";
 import { useState } from "react";
 import styles from "./deleteSubject.module.scss";
 import deleteSubject from "../../../services/subjects/deleteSubject";
+import { queryClient } from "../../../services/queryClient";
 
 export default function DeleteSubject() {
   const { subjectId } = useParams();
@@ -48,9 +49,14 @@ export default function DeleteSubject() {
               fontSize: "1.2rem",
               margin: "32px auto 0 auto",
             }}
-            onClick={() => {
-              const response = deleteSubject(subjectId ?? "", localStorage.getItem("token") ?? "")
-              setSubjectDeleted(true);
+            onClick={async () => {
+              const response = await deleteSubject(subjectId ?? "", localStorage.getItem("token") ?? "")
+              if(response.ok) {
+                setSubjectDeleted(true);
+                return
+              }
+              queryClient.invalidateQueries({ queryKey: ["subjects"] })
+              return
             }}
           >
             <img src="/images/archive.svg" alt="delete icon" />

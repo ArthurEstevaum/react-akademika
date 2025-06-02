@@ -1,1 +1,1 @@
-export type Status = "cursando" | "não iniciado" | "concluído"
+export type Status = "pending" | "notStarted" | "done"
