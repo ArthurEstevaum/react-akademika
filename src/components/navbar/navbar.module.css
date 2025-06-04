@@ -30,7 +30,6 @@
 
 .icon {
   width: 22px;
-  filter: invert(1);
 }
 
 .hamburger-section {
@@ -48,8 +47,12 @@
 }
 
 .link {
-  color: var(--white);
+  color: var(--black);
   padding-bottom: 8px;
+}
+
+.nav {
+  background-color: var(--background-gray);
 }
 
 @keyframes slide {

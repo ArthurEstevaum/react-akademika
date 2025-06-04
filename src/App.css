@@ -35,10 +35,11 @@ body {
 }
 
 #light-illustration {
-  display: none;
+  filter: none;
 }
 
 #dark-illustration {
+  display: none;
   filter: invert();
   position: relative;
   z-index: -1;
