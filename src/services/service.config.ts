@@ -1,3 +1,1 @@
-import { env } from "process";
-
-export const apiBaseUrl = process.env.API_BASE_URL
+export const apiBaseUrl = "https://akademika-api.skyecaravel.cloud"
