@@ -42,6 +42,38 @@ O perfil de disciplina é responsável por mostrar ao usuário quais são as inf
 
 [Link do Trello](https://trello.com/b/bSx1z2P8/akademika)
 
+## Diagrama de atividades
+
+```mermaid
+flowchart TD
+    A[Início] --> B{Usuário já possui conta?}
+    B -- Sim --> C[Fazer login]
+    B -- Não --> D[Realizar cadastro]
+    D --> C
+    C --> E{Login bem-sucedido?}
+    E -- Sim --> F[Redirecionar para Dashboard]
+    E -- Não --> C2[Exibir erro e tentar novamente]
+    C2 --> C
+    F --> G{Deseja criar uma disciplina?}
+    G -- Sim --> H[Preencher formulário de nova disciplina]
+    H --> I[Salvar disciplina]
+    I --> F
+    G -- Não --> J{Deseja editar disciplina?}
+    J -- Sim --> K[Selecionar disciplina para edição]
+    K --> L[Atualizar dados]
+    L --> F
+    J -- Não --> M{Deseja excluir disciplina?}
+    M -- Sim --> N[Selecionar disciplina para exclusão]
+    N --> O[Confirmar e excluir]
+    O --> F
+    M -- Não --> P{Deseja sair do sistema?}
+    P -- Sim --> Q[Fazer logout]
+    Q --> R[Fim]
+    P -- Não --> F
+
+
+```
+
 Pair programming: Não foi usado na maior parte dos nossos processos em razão do conflito de horários com os membros. Optamos por alinhamentos assíncronos na maior parte do desenvolvimento (O que se mostrou bem efetivo).
 ![Imagem da reunião do grupo](https://github.com/user-attachments/assets/c2082936-9a35-4650-bc21-d0d8ee00ecee)
 
