@@ -6,6 +6,7 @@ import { ITextInput } from "../../interfaces/ITextInput";
 import styles from "./login.module.scss";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router";
+import { apiBaseUrl } from "../../services/service.config";
 
 const Login = () => {
   const auth = useContext(AuthContext);
@@ -14,7 +15,7 @@ const Login = () => {
 
   //   @ts-ignore
   const onSubmit = async (data) => {
-    const response = await fetch("http://localhost:8080/auth/login", {
+    const response = await fetch(`${apiBaseUrl}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

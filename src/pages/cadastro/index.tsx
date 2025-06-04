@@ -5,6 +5,7 @@ import { ITextInput } from "../../interfaces/ITextInput";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router";
+import { apiBaseUrl } from "../../services/service.config";
 
 const Cadastro = () => {
 
@@ -14,7 +15,7 @@ const Cadastro = () => {
 
   //   @ts-ignore
   const onSubmit = async(data) => {
-    const response = await fetch("http://localhost:8080/auth/register", {
+    const response = await fetch(`${apiBaseUrl}/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
