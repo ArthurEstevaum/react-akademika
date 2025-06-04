@@ -1,1 +1,3 @@
-export const apiBaseUrl = "http://localhost:8080"
+import { env } from "process";
+
+export const apiBaseUrl = process.env.API_BASE_URL
